@@ -49,5 +49,5 @@ const rockpaperScissor = (player: "rock" | "paper" | "scissor") => {
 
 };
 
-console.log(rockpaperScissor("rock"));
+console.log(rockpaperScissor("paper"));
 
