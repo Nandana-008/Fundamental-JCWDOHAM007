@@ -24,6 +24,8 @@ const siswa: Student = {
 console.log(siswa.hobi); // cara pertama akses value object
 console.log(siswa["nama"]);// cara kedua akses value object
 
+// INI ARRAY OF OBJECT
+
 const students = [
     {name: "Budi", age: 10},
     {name: "Joko", age: 10},
@@ -251,3 +253,64 @@ const result = points.map((point) => {
 });
 
 console.log(result);
+
+const students2 = [{id: 1, name: "Budi"},
+                {id: 2, name: "Joko"},
+                {id: 3, name: "Siti"},
+];
+
+const result2 = students2.map((student) => {
+    return student.id;
+
+})
+
+console.log(result2);
+
+// FOREACH -> Melakukan looping pada array tapi ga mereturn ke array baru
+const fruits4: string[] = ["banana", "apple", "orange", "papaya"];
+
+fruits4.forEach((fruit, index) => {
+    console.log(fruit);
+    console.log(index);
+}); // Cuman lakuin looping ga ngasilin apapun jadi ga perlu pakai return dkk
+
+// FILTER -> Melakukan looping pada array dan menghasilkan array baru berdasarkan pada return function nya
+const ages: number[] = [12, 16, 56, 70, 80, 44, 20];
+
+const result4 = ages.filter((age) => {
+    return age > 20;
+})
+
+console.log(result4);
+
+// FIND -> Mencari value yang ditemukan pertama kali dalam array
+const ages2: number[] = [12, 16, 56, 70, 80, 44, 20];
+
+const result5 = ages2.find((age) => {
+    return age === 70;
+})
+
+console.log(result5);
+
+// FIND INDEX -> sama kyk find tapi yang dihasilkan index nya, kalau ga ada hasilnya -1
+const students3 = [{id: 100, name: "Budi"},
+                {id: 101, name: "Joko"},
+                {id: 102, name: "Siti"},
+                {id: 103, name: "Rusdi"},
+                {id : 104, name: "Fuad"},
+];
+
+const result6 = students3.findIndex((student) => {
+    return student.id === 103;
+})
+
+console.log(result6);
+
+// REDUCE -> melakukan operasi aritmatika
+const numbers2 : number[] = [200, 50, 100, 50];
+
+const result7 = numbers2.reduce((a, b) => {
+    return a + b;
+})
+
+console.log(result7);
