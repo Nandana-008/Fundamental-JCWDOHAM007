@@ -98,7 +98,7 @@ console.log(5 >= 5);
 
 // ========================= MATH ======================
 // Math ceil -> Membulatkan angka ke atas
-console.log(Math.ceil(4,2));
+console.log(Math.ceil(4.2));
 
 // Math floor -> membulatkan angka ke bawah
 console.log(Math.floor(4.7));
