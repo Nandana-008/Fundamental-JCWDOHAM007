@@ -101,3 +101,54 @@ myTransaction.showTotal();
 
 const hasilFinal = myTransaction.checkout();
 console.log(hasilFinal);
+
+// DEMO NYA KAK DANIEL
+interface Student {
+    name: string;
+    email: string;
+    age: number;
+    score: number;
+}
+
+const students: Student[] = [
+    {name: "budi", email: "budi@gmail", age: 20, score: 90},
+    {name: "andre", email: "andre@gmail", age: 21, score: 80},
+    {name: "siti", email: "siti@gmail", age: 22, score: 85 },
+];
+
+class CalculateStudent {
+    students: Student[]
+
+    constructor(students: Student[]) {
+        this.students = students;
+    }
+
+    calculate () {
+        const scores = this.students.map((student) => student.score);
+        const ages = this.students.map((student) => student.age);
+
+        const maxScore = Math.max(...scores);
+        const minScore = Math.min(...scores);
+        const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length;
+
+        const maxAge = Math.max(...ages);
+        const minAge = Math.min(...ages);
+        const avgAge = ages.reduce((a, b) => a + b, 0) / ages.length;
+
+        return {
+            score: {
+                highest: maxScore,
+                lowest: minScore,
+                average: avgAge
+            },
+            age: {
+                highest: maxAge,
+                lowest: minAge,
+                average: avgAge,
+            },
+        };
+    }
+}
+
+const calculateStudent = new CalculateStudent(students);
+console.log(calculateStudent.calculate());
