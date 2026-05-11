@@ -51,3 +51,28 @@ const rockpaperScissor = (player: "rock" | "paper" | "scissor") => {
 
 console.log(rockpaperScissor("paper"));
 
+// NUNJUKIN NOMOR KECIL KE -2 DARI ARRAY OF NUMBERS
+const numbers3 : number[] = [5, 3, 1, 7, 6, 2];
+numbers3.sort((a, b) => a - b);
+console.log(numbers3);
+console.log(numbers3[1]);
+
+// MENGHITUNG TIAP ELEMENT DI POSISI YANG SAMA
+const numbers4 : number[] = [1, 2, 3];
+const numbers5 : number[] = [3, 2, 1];
+
+const result = numbers4.map((num, idx) => {
+    return num + numbers5[idx];
+});
+
+console.log(result);
+
+// MENAMBAHKAN ELEMENT DI ARRAY TAPI KALAU UDAH ADA GA BISA DI ADD
+const arr: number[] = [1, 2, 3, 4];
+const newNumber: number = 5;
+
+if (!arr.includes(newNumber)) {
+    arr.push(newNumber);
+}
+
+console.log(arr);
