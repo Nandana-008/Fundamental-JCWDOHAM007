@@ -121,4 +121,4 @@ const test2 = () => {
     console.log("test2");
 };
 
-test2();
+test2(); //ini function expression ga bisa hoisted, yang bisa cuman function declaration doang
