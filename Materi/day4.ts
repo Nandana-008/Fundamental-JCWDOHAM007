@@ -287,7 +287,7 @@ console.log(result4);
 const ages2: number[] = [12, 16, 56, 70, 80, 44, 20];
 
 const result5 = ages2.find((age) => {
-    return age === 70;
+    return age === 80;
 })
 
 console.log(result5);
